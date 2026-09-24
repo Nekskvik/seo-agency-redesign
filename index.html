@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vzlet - SEO-партнёр, который показывает результат, а не обещает</title>
+        <meta name="description" content="Бесплатный 7-дневный тест SEO-продвижения в Яндексе. Финансовые гарантии в договоре." />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <div class="cursor-dot"></div>
+        <div class="cursor-ring"></div>
+        <div class="scroll-progress" id="scrollProgress"></div>
+
+        <nav id="nav">
+            <div class="nav-inner">
+                <a href="#" class="logo">
+                    <span class="logo-mark"></span>
+                    VZLET<span class="dim">/</span>AGENCY
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Услуги</a></li>
+                    <li><a href="#">Кейсы</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#" class="nav-cta" data-modal-open="contactModal">Запустить тест →</a></li>
+                </ul>
+                <button class="mobile-menu-btn" aria-label="Меню">≡</button>
+            </div>
+        </nav>
+
+        <section class="hero" id="hero">
+            <div class="glow glow-1" data-parallax="0.25"></div>
+            <div class="glow glow-2" data-parallax="-0.2"></div>
+            <div class="hero-grid-bg" data-parallax="0.1"></div>
+
+            <div class="container hero-content">
+                <div class="hero-left">
+                    <div class="eyebrow reveal">SEO-партнёр для бизнеса, который считает деньги</div>
+
+                    <h1>
+                        <span class="split-line"><span>Мы не обещаем топ.</span></span>
+                        <span class="split-line"><span style="color: var(--text-muted);">Мы его <span class="serif accent">показываем</span> -</span></span>
+                        <span class="split-line"><span style="color: var(--text-muted);">за 7 дней, бесплатно.</span></span>
+                    </h1>
+
+                    <p class="hero-sub reveal">
+                        Прежде чем вы заплатите хотя бы рубль, мы работаем на результат.
+                        Если позиций нет - вы ничего не теряете. Если есть - вы видите цифры до подписания договора.
+                    </p>
+
+                    <div class="hero-ctas reveal">
+                        <a href="#test" class="btn-primary" data-modal-open="contactModal">
+                            <span>Запустить бесплатный тест</span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m-4-4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <a href="#cases" class="btn-ghost">Смотреть кейсы</a>
+                    </div>
+                </div>
+
+                <div class="hero-widget reveal" data-parallax="0.05">
+                    <div class="widget-header">
+                        <span class="widget-title">Позиции клиента · Живой отчёт</span>
+                        <span class="widget-live">LIVE</span>
+                    </div>
+                    <div class="positions-list" id="positionsList">
+                        <div class="position-row" data-delay="0">
+                            <span class="position-keyword">купить промышленный насос</span>
+                            <span class="position-old">47</span>
+                            <span class="position-new">3</span>
+                        </div>
+                        <div class="position-row" data-delay="150">
+                            <span class="position-keyword">насос для химической промышленности</span>
+                            <span class="position-old">112</span>
+                            <span class="position-new">6</span>
+                        </div>
+                            <div class="position-row" data-delay="300">
+                            <span class="position-keyword">производитель насосов москва</span>
+                            <span class="position-old">88</span>
+                            <span class="position-new">1</span>
+                        </div>
+                        <div class="position-row" data-delay="450">
+                            <span class="position-keyword">насосное оборудование оптом</span>
+                            <span class="position-old">203</span>
+                            <span class="position-new">8</span>
+                        </div>
+                        <div class="position-row" data-delay="600">
+                            <span class="position-keyword">насосы высокого давления</span>
+                            <span class="position-old">76</span>
+                            <span class="position-new">4</span>
+                        </div>
+                    </div>
+                    <div class="widget-footer">
+                        <span class="widget-total">Трафик за 4 мес: <strong>+187%</strong></span>
+                        <span class="widget-total">Заявок: <strong>×2,4</strong></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="diag-marquee-wrap">
+            <div class="diag-marquee">
+                <div class="diag-track">
+                    <span>ЯНДЕКС ТОП-3</span>
+                    <span>БЕЗ ПРЕДОПЛАТЫ</span>
+                    <span>7 ДНЕЙ БЕСПЛАТНО</span>
+                    <span>ФИНАНСОВЫЕ ГАРАНТИИ</span>
+                    <span>ЯНДЕКС ТОП-3</span>
+                    <span>БЕЗ ПРЕДОПЛАТЫ</span>
+                    <span>7 ДНЕЙ БЕСПЛАТНО</span>
+                    <span>ФИНАНСОВЫЕ ГАРАНТИИ</span>
+                </div>
+            </div>
+            <div class="diag-marquee">
+                <div class="diag-track">
+                    <span>E-COMMERCE</span>
+                    <span>PRODUCTION</span>
+                    <span>MEDTECH</span>
+                    <span>SAAS</span>
+                    <span>RETAIL</span>
+                    <span>FINTECH</span>
+                    <span>B2B</span>
+                    <span>E-COMMERCE</span>
+                    <span>PRODUCTION</span>
+                    <span>MEDTECH</span>
+                    <span>SAAS</span>
+                    <span>RETAIL</span>
+                    <span>FINTECH</span>
+                    <span>B2B</span>
+                </div>
+            </div>
+        </div>
+
+        <section id="manifesto" class="manifesto">
+            <div class="container">
+                <div class="manifesto-inner" id="manifestoText">
+                    SEO - это не магия. Это дисциплина. <span class="accent-word">Каждый</span> месяц мы фиксируем KPI. Каждую неделю вы видите отчёт. <span class="accent-word">Каждую</span> цифру мы готовы защитить деньгами. Если не достигаем показателей - работаем бесплатно. Не потому что мы добрые. Потому что мы уверены.
+                </div>
+
+                <div class="manifesto-photo" aria-hidden="true">
+                    <div class="manifesto-photo-inner">
+                        <img src="images/our_team.jpg" alt="Команда Vzlet Agency" />
+                        <div class="manifesto-photo-grain"></div>
+                        <div class="manifesto-photo-shine"></div>
+                        <div class="manifesto-photo-scanner"></div>
+                        <div class="manifesto-photo-frame"></div>
+                    </div>
+                    <div class="manifesto-photo-particles">
+                        <span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="manifesto-photo-label">
+                        <span>VZLET / TEAM</span>
+                        <strong>2026</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="reveal">
+                    <span class="eyebrow">Принципы работы</span>
+                    <h2 style="max-width: 800px;">
+                        Три вещи, которые <span class="serif accent">отличают</span> нас от SEO-студий.
+                    </h2>
+                </div>
+                <div class="principles-list">
+                    <div class="principle reveal">
+                        <div class="principle-num">01 /</div>
+                        <h3>Финансовая ответственность</h3>
+                        <p>Не берём оплату, если KPI не достигнуты. Это прописано в договоре - не в презентации. Каждый месяц мы фиксируем количество запросов, которые должны выйти в топ-10, и отвечаем за эти цифры деньгами.</p>
+                    </div>
+                    <div class="principle reveal">
+                        <div class="principle-num">02 /</div>
+                        <h3>Прозрачность процесса</h3>
+                        <p>Еженедельный отчёт. Ежемесячный план задач. Вы всегда знаете, за что платите и что происходит с вашим сайтом - без «мы работаем, доверьтесь нам». Всё в одном дашборде, доступ в первый день.</p>
+                    </div>
+                    <div class="principle reveal">
+                        <div class="principle-num">03 /</div>
+                        <h3>Скорость без риска</h3>
+                        <p>Первые результаты - за 7 дней. Только белые методы: никаких ботов, накруток и серых ссылок. Мы не рискуем вашим доменом ради краткосрочного результата - и не советуем этого никому.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cases" class="cases">
+
+            <div class="cases-header">
+                <span class="eyebrow" style="margin-bottom: 12px;">Кейсы</span>
+                <h2>Проекты, которые<br>мы <span class="serif accent">не забудем</span>.</h2>
+            </div>
+
+            <div class="cases-viewport" id="casesViewport">
+                <div class="cases-track" id="casesTrack">
+
+                <article class="case-card">
+                    <span class="case-number">01 / 04</span>
+                        <div class="case-left">
+                        <div class="case-tags">
+                            <span class="case-tag">E-commerce</span>
+                            <span class="case-tag">Каталог 12k SKU</span>
+                        </div>
+                        <h3>Интернет-магазин электроники</h3>
+                        <p>Каталог из 12 000 SKU, слабая структура, дубли категорий. Перестроили архитектуру, убрали мусор, ускорили загрузку - и вывели коммерческие категории в топ.</p>
+                        <a href="#" class="case-cta">
+                            Смотреть кейс
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m-4-4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                    <div class="case-right">
+                        <div class="case-metric"><div class="case-metric-val">+187%</div><div class="case-metric-lbl">органический трафик за 4 месяца</div></div>
+                        <div class="case-metric"><div class="case-metric-val">847</div><div class="case-metric-lbl">запросов в топ-10 Яндекса</div></div>
+                        <div class="case-metric"><div class="case-metric-val">×2,4</div><div class="case-metric-lbl">рост заявок из органики</div></div>
+                    </div>
+                </article>
+
+                <article class="case-card">
+                    <span class="case-number">02 / 04</span>
+                    <div class="case-left">
+                        <div class="case-tags">
+                            <span class="case-tag">Medtech</span>
+                            <span class="case-tag">YMYL</span>
+                        </div>
+                        <h3>Федеральная сеть клиник</h3>
+                        <p>YMYL-тематика, требования Яндекса к медицинскому контенту. Работали аккуратно: врачебные статьи, репутационные запросы, локальное SEO по 14 городам.</p>
+                        <a href="#" class="case-cta">
+                            Смотреть кейс
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m-4-4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                    <div class="case-right">
+                        <div class="case-metric"><div class="case-metric-val">+142%</div><div class="case-metric-lbl">трафик за 4 месяца</div></div>
+                        <div class="case-metric"><div class="case-metric-val">438</div><div class="case-metric-lbl">запросов в топ-3</div></div>
+                        <div class="case-metric"><div class="case-metric-val">×2,1</div><div class="case-metric-lbl">рост онлайн-записей</div></div>
+                    </div>
+                </article>
+
+                <article class="case-card">
+                    <span class="case-number">03 / 04</span>
+                    <div class="case-left">
+                        <div class="case-tags">
+                            <span class="case-tag">Production</span>
+                            <span class="case-tag">B2B</span>
+                        </div>
+                        <h3>Производитель промышленного оборудования</h3>
+                        <p>Длинный цикл сделки, сложная номенклатура. Работали с техническими запросами и региональными поддоменами. B2B-заявки выросли почти вдвое.</p>
+                        <a href="#" class="case-cta">
+                            Смотреть кейс
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m-4-4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                    <div class="case-right">
+                        <div class="case-metric"><div class="case-metric-val">+124%</div><div class="case-metric-lbl">трафик за 5 месяцев</div></div>
+                        <div class="case-metric"><div class="case-metric-val">312</div><div class="case-metric-lbl">запросов в топ-10</div></div>
+                        <div class="case-metric"><div class="case-metric-val">×1,8</div><div class="case-metric-lbl">рост B2B-заявок</div></div>
+                    </div>
+                </article>
+
+                <article class="case-card">
+                    <span class="case-number">04 / 04</span>
+                        <div class="case-left">
+                        <div class="case-tags">
+                            <span class="case-tag">SaaS</span>
+                            <span class="case-tag">Регионы</span>
+                        </div>
+                        <h3>B2B SaaS-платформа</h3>
+                        <p>Продукт для логистики. Вышли на топ по Москве и Санкт-Петербургу, затем масштабировались на 18 регионов. Прогнозируемый поток лидов без контекста.</p>
+                        <a href="#" class="case-cta">
+                            Смотреть кейс
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m-4-4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                    </div>
+                    <div class="case-right">
+                        <div class="case-metric"><div class="case-metric-val">+213%</div><div class="case-metric-lbl">трафик за 6 месяцев</div></div>
+                        <div class="case-metric"><div class="case-metric-val">18</div><div class="case-metric-lbl">регионов в топ-10</div></div>
+                        <div class="case-metric"><div class="case-metric-val">×3,1</div><div class="case-metric-lbl">рост demo-запросов</div></div>
+                    </div>
+                </article>
+
+                </div>
+            </div>
+
+            <div class="cases-controls">
+                <div class="cases-counter">
+                    <strong id="caseIndex">01</strong>
+                    <span class="cases-counter-total">/ 04</span>
+                </div>
+                <div class="cases-dots" id="casesDots"></div>
+                <div class="cases-arrows">
+                    <button class="cases-arrow" id="casesPrev" type="button" aria-label="Предыдущий кейс">
+                        <svg viewBox="0 0 16 16" fill="none"><path d="M10 12L6 8l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <button class="cases-arrow" id="casesNext" type="button" aria-label="Следующий кейс">
+                        <svg viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="cases-progress-line">
+                <div class="cases-progress-track">
+                    <div class="cases-progress-fill" id="casesProgress"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="process" class="process-pin">
+            <div class="process-sticky">
+                <div class="process-inner">
+                    <div class="process-left">
+                        <span class="eyebrow">Как мы запускаем проекты</span>
+                        <h2>Прозрачный процесс.<br>От аудита до масштабирования.</h2>
+
+                        <div class="process-steps-scroll" id="processSteps">
+                        <div class="process-step-item active" data-step="0">
+                            <div class="process-step-tag">ШАГ 01 / АНАЛИЗ</div>
+                            <h3>Анализ и стратегия</h3>
+                            <p>Собираем семантику, проверяем позиции, формируем стратегию на 3–4 месяца с целями и KPI. Фиксируем финансовые гарантии достижения результата в договоре.</p>
+                        </div>
+                        <div class="process-step-item" data-step="1">
+                            <div class="process-step-tag">ШАГ 02 / ТЕСТ</div>
+                            <h3>Тестовая неделя</h3>
+                            <p>Показываем первые результаты до подписания договора. Фокусируемся на внешнем продвижении, даём быстрый рост видимости. Вы убеждаетесь в эффективности - бесплатно.</p>
+                        </div>
+                        <div class="process-step-item" data-step="2">
+                            <div class="process-step-tag">ШАГ 03 / ДОГОВОР</div>
+                            <h3>Договор и KPI</h3>
+                            <p>Фиксируем список работ и финансовые гарантии. Несём ответственность за выполнение KPI каждый месяц. Если не достигаем показателей - работаем бесплатно.</p>
+                        </div>
+                        <div class="process-step-item" data-step="3">
+                            <div class="process-step-tag">ШАГ 04 / МАСШТАБ</div>
+                            <h3>Масштабирование</h3>
+                            <p>Расширяем семантику, подключаем регионы, наращиваем трафик. Ежемесячные отчёты и планы. Через 3–4 месяца спокойно добавляем 10–20 новых регионов.</p>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="process-visual">
+                        <svg viewBox="0 0 400 400" id="flightSvg">
+                            <path class="flight-path" d="M 40 360 Q 100 340 140 280 Q 180 220 200 180 Q 220 140 260 100 Q 300 60 360 40" />
+                            <path class="flight-path-drawn" id="flightPathDrawn" d="M 40 360 Q 100 340 140 280 Q 180 220 200 180 Q 220 140 260 100 Q 300 60 360 40" />
+                            <circle class="flight-node active" data-node="0" cx="40" cy="360" r="8" />
+                            <text class="flight-node-label active" data-node="0" x="55" y="368">01 АНАЛИЗ</text>
+                            <circle class="flight-node" data-node="1" cx="140" cy="280" r="8" />
+                            <text class="flight-node-label" data-node="1" x="155" y="288">02 ТЕСТ</text>
+                            <circle class="flight-node" data-node="2" cx="220" cy="180" r="8" />
+                            <text class="flight-node-label" data-node="2" x="235" y="188">03 ДОГОВОР</text>
+                            <circle class="flight-node" data-node="3" cx="360" cy="40" r="8" />
+                            <text class="flight-node-label" data-node="3" x="300" y="32">04 МАСШТАБ</text>
+                        </svg>
+                        <div class="process-progress-ring">
+                            <span>ПРОГРЕСС</span>
+                            <span class="num" id="processPercent">25%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="v-ticker-wrap">
+                    <div class="v-ticker-content reveal">
+                        <span class="eyebrow">Результаты в цифрах</span>
+                        <h2>Мы помним каждый проект. Потому что за каждый отвечаем.</h2>
+                        <p>Живая лента результатов из разных вертикалей - только то, за что мы готовы поручиться. Никаких «>1000 сайтов в топе» без фамилий и цифр.</p>
+                    </div>
+
+                    <div class="v-ticker reveal">
+                        <div class="v-ticker-track" id="vTickerTrack">
+                            <div class="v-item">
+                                <span class="v-item-industry">E-COMMERCE</span>
+                                <span class="v-item-result">Интернет-магазин электроники</span>
+                                <span class="v-item-metric">+187%</span>
+                            </div>
+                            <div class="v-item">
+                                <span class="v-item-industry">MEDTECH</span>
+                                <span class="v-item-result">Федеральная сеть клиник</span>
+                                <span class="v-item-metric">+142%</span>
+                            </div>
+                            <div class="v-item">
+                                <span class="v-item-industry">PRODUCTION</span>
+                                <span class="v-item-result">Производитель оборудования</span>
+                                <span class="v-item-metric">×1,8</span>
+                            </div>
+                            <div class="v-item">
+                                <span class="v-item-industry">SAAS</span>
+                                <span class="v-item-result">Логистическая B2B-платформа</span>
+                                <span class="v-item-metric">×3,1</span>
+                            </div>
+                            <div class="v-item">
+                                <span class="v-item-industry">RETAIL</span>
+                                <span class="v-item-result">Сеть магазинов товаров для дома</span>
+                                <span class="v-item-metric">+96%</span>
+                            </div>
+                            <div class="v-item">
+                                <span class="v-item-industry">FINTECH</span>
+                                <span class="v-item-result">Сервис для управления финансами</span>
+                                <span class="v-item-metric">+118%</span>
+                            </div>
+                            <div class="v-item">
+                                <span class="v-item-industry">E-COMMERCE</span>
+                                <span class="v-item-result">Интернет-магазин электроники</span>
+                                <span class="v-item-metric">+187%</span>
+                            </div>
+                            <div class="v-item">
+                                <span class="v-item-industry">MEDTECH</span>
+                                <span class="v-item-result">Федеральная сеть клиник</span>
+                                <span class="v-item-metric">+142%</span>
+                            </div>
+                            <div class="v-item">
+                                <span class="v-item-industry">PRODUCTION</span>
+                                <span class="v-item-result">Производитель оборудования</span>
+                                <span class="v-item-metric">×1,8</span>
+                            </div>
+                            <div class="v-item">
+                                <span class="v-item-industry">SAAS</span>
+                                <span class="v-item-result">Логистическая B2B-платформа</span>
+                                <span class="v-item-metric">×3,1</span>
+                            </div>
+                            <div class="v-item">
+                                <span class="v-item-industry">RETAIL</span>
+                                <span class="v-item-result">Сеть магазинов товаров для дома</span>
+                                <span class="v-item-metric">+96%</span>
+                            </div>
+                            <div class="v-item">
+                                <span class="v-item-industry">FINTECH</span>
+                                <span class="v-item-result">Сервис для управления финансами</span>
+                                <span class="v-item-metric">+118%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <div class="container">
+
+                <div class="services-header reveal">
+                <span class="eyebrow">Услуги</span>
+                <h2 style="max-width: 900px;">
+                    12 направлений, в которых мы <span class="serif accent">разбираемся</span> глубоко.
+                </h2>
+                <p class="services-sub">
+                    От аудита до федерального продвижения - закрываем весь цикл работ внутри команды.
+                </p>
+                </div>
+
+                <div class="services-list" id="servicesList">
+
+                <a class="service-row" href="#" data-service="GEO">
+                    <span class="service-num">01</span>
+                    <span class="service-body">
+                    <span class="service-title">GEO продвижение в нейросетях Yandex</span>
+                    <span class="service-tag">AI · Нейросети</span>
+                    </span>
+                    <span class="service-meta">
+                    <span class="service-arrow">
+                        <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-5-5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    </span>
+                </a>
+
+                <a class="service-row" href="#" data-service="SEO">
+                    <span class="service-num">02</span>
+                    <span class="service-body">
+                    <span class="service-title">SEO продвижение корпоративных сайтов</span>
+                    <span class="service-tag">B2B</span>
+                    </span>
+                    <span class="service-meta">
+                    <span class="service-arrow">
+                        <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-5-5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    </span>
+                </a>
+
+                <a class="service-row" href="#" data-service="START">
+                    <span class="service-num">03</span>
+                    <span class="service-body">
+                    <span class="service-title">SEO продвижение молодого сайта</span>
+                    <span class="service-tag">Старт с нуля</span>
+                    </span>
+                    <span class="service-meta">
+                    <span class="service-arrow">
+                        <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-5-5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    </span>
+                </a>
+
+                <a class="service-row" href="#" data-service="GOOGLE">
+                    <span class="service-num">04</span>
+                    <span class="service-body">
+                    <span class="service-title">SEO продвижение сайтов в ТОП Google</span>
+                    <span class="service-tag">Google</span>
+                    </span>
+                    <span class="service-meta">
+                    <span class="service-arrow">
+                        <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-5-5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    </span>
+                </a>
+
+                <a class="service-row" href="#" data-service="YANDEX">
+                    <span class="service-num">05</span>
+                    <span class="service-body">
+                    <span class="service-title">SEO продвижение сайтов в Яндекс</span>
+                    <span class="service-tag">Яндекс</span>
+                    </span>
+                    <span class="service-meta">
+                    <span class="service-arrow">
+                        <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-5-5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    </span>
+                </a>
+
+                <a class="service-row" href="#" data-service="ECOM">
+                    <span class="service-num">06</span>
+                    <span class="service-body">
+                    <span class="service-title">SEO-продвижение интернет-магазинов</span>
+                    <span class="service-tag">E-commerce</span>
+                    </span>
+                    <span class="service-meta">
+                    <span class="service-arrow">
+                        <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-5-5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    </span>
+                </a>
+
+                <a class="service-row" href="#" data-service="MED">
+                    <span class="service-num">07</span>
+                    <span class="service-body">
+                    <span class="service-title">SEO продвижение медицинских центров</span>
+                    <span class="service-tag">YMYL</span>
+                    </span>
+                    <span class="service-meta">
+                    <span class="service-arrow">
+                        <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-5-5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    </span>
+                </a>
+
+                <a class="service-row" href="#" data-service="PROD">
+                    <span class="service-num">08</span>
+                    <span class="service-body">
+                    <span class="service-title">SEO продвижение производств</span>
+                    <span class="service-tag">Industry</span>
+                    </span>
+                    <span class="service-meta">
+                    <span class="service-arrow">
+                        <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-5-5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    </span>
+                </a>
+
+                <a class="service-row" href="#" data-service="AUDIT">
+                    <span class="service-num">09</span>
+                    <span class="service-body">
+                    <span class="service-title">Аудит SEO сайта</span>
+                    <span class="service-tag">Диагностика</span>
+                    </span>
+                    <span class="service-meta">
+                    <span class="service-arrow">
+                        <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-5-5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    </span>
+                </a>
+
+                <a class="service-row" href="#" data-service="BITRIX">
+                    <span class="service-num">10</span>
+                    <span class="service-body">
+                    <span class="service-title">Поддержка и продвижение сайта Битрикс</span>
+                    <span class="service-tag">1C-Битрикс</span>
+                    </span>
+                    <span class="service-meta">
+                    <span class="service-arrow">
+                        <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-5-5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    </span>
+                </a>
+
+                <a class="service-row" href="#" data-service="DENT">
+                    <span class="service-num">11</span>
+                    <span class="service-body">
+                    <span class="service-title">Продвижение сайтов стоматологии</span>
+                    <span class="service-tag">Dental</span>
+                    </span>
+                    <span class="service-meta">
+                    <span class="service-arrow">
+                        <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-5-5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    </span>
+                </a>
+
+                <a class="service-row" href="#" data-service="TRAFFIC">
+                    <span class="service-num">12</span>
+                    <span class="service-body">
+                    <span class="service-title">Трафиковое продвижение сайта</span>
+                    <span class="service-tag">Performance</span>
+                    </span>
+                    <span class="service-meta">
+                    <span class="service-arrow">
+                        <svg viewBox="0 0 20 20" fill="none"><path d="M4 10h12m-5-5l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </span>
+                    </span>
+                </a>
+
+                </div>
+
+                <div class="services-footer reveal">
+                <a href="#" class="btn-primary" data-modal-open="contactModal">
+                    <span>Обсудить задачу</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m-4-4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <span class="services-footer-note">Не нашли нужное? Соберём индивидуальный пакет.</span>
+                </div>
+
+            </div>
+            </section>
+
+        <section class="stats-spotlight" id="statsSection">
+            <div class="stats-glow" id="statsGlow"></div>
+            <div class="container">
+                <div class="reveal">
+                    <span class="eyebrow">О компании</span>
+                    <h2 style="max-width: 700px;">Цифры, за которые мы отвечаем.</h2>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat reveal">
+                        <span class="stat-value" data-count="12">0</span>
+                        <span class="stat-label">лет на рынке SEO и разработки</span>
+                    </div>
+                    <div class="stat reveal">
+                        <span class="stat-value">Топ-3</span>
+                        <span class="stat-label">позиция клиентов после работ команды</span>
+                    </div>
+                    <div class="stat reveal">
+                        <span class="stat-value" data-count="1247" data-comma="true">0</span>
+                        <span class="stat-label">проектов выведено в топ за всё время</span>
+                    </div>
+                    <div class="stat reveal">
+                        <span class="stat-value"><span class="accent" data-count="35" data-prefix="+">+0</span><span class="accent">%</span></span>
+                        <span class="stat-label">средний рост органического трафика за 6 месяцев</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="test" class="test-section">
+            <div class="glow glow-2" data-parallax="0.15" style="left: -15%; top: 20%;"></div>
+            <div class="container">
+                <div class="test-grid">
+                    <div class="reveal">
+                        <span class="eyebrow">Бесплатный тест</span>
+                        <h2>7 дней. Без договора. Без оплаты.</h2>
+                        <p class="muted" style="margin-top: 24px; font-size: 18px; max-width: 500px;">
+                        Мы показываем реальный потенциал вашего сайта в Яндексе - до того, как вы что-то подпишете.
+                        </p>
+
+                        <div class="test-steps">
+                        <div class="test-step">
+                            <span class="test-step-num">01</span>
+                            <div class="test-step-text">
+                            <strong>Собираем 300–500 запросов</strong>
+                            <span>По вашей тематике и региону, с реальной частотностью и коммерческим интентом.</span>
+                            </div>
+                        </div>
+                        <div class="test-step">
+                            <span class="test-step-num">02</span>
+                            <div class="test-step-text">
+                            <strong>Проверяем текущие позиции</strong>
+                            <span>Смотрим, где сайт стоит сейчас в Яндексе, и есть ли точки быстрого роста.</span>
+                            </div>
+                        </div>
+                        <div class="test-step">
+                            <span class="test-step-num">03</span>
+                            <div class="test-step-text">
+                            <strong>Даём прогноз на 3 месяца</strong>
+                            <span>Показываем конкретные цифры: сколько запросов и за какой срок выйдет в топ-10.</span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="test-form-card reveal">
+                        <h3>Запустить тест</h3>
+                        <p>Оставьте сайт - вернёмся с анализом в течение 24 часов.</p>
+                        <form onsubmit="event.preventDefault(); const btn = this.querySelector('.form-submit'); btn.innerHTML = '<span>✓ Заявка отправлена</span>';">
+                        <div class="form-group">
+                            <label>Имя</label>
+                            <input type="text" placeholder="Артём" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Сайт</label>
+                            <input type="url" placeholder="example.ru" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email или телефон</label>
+                            <input type="text" placeholder="hello@company.ru" required>
+                        </div>
+                        <button type="submit" class="btn-primary form-submit">
+                            <span>Получить бесплатный тест</span>
+                        </button>
+                        <p class="form-note">Отправляя форму, вы соглашаетесь с политикой конфиденциальности. Мы не передаём данные третьим лицам.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial-section">
+            <div class="container">
+                <div class="reveal">
+                    <span class="eyebrow">Отзывы клиентов</span>
+                    <h2 style="max-width: 700px;">Что говорят те, кто уже <span class="serif accent">считает</span> результат.</h2>
+                </div>
+
+                <div class="testimonial reveal">
+                    <div class="testimonial-mark">"</div>
+                    <div class="testimonial-quote">
+                        За 4 месяца вышли в топ-3 по 60% ключевых запросов. До этого тратили в три раза больше на контекст и не понимали, куда уходят деньги. Сейчас органика даёт стабильный поток заявок без роста бюджета.
+                    </div>
+                    <div class="testimonial-meta">
+                        <span class="name">Алексей М.</span>
+                        <span class="role">CMO, федеральная сеть клиник</span>
+                        <span class="company">MEDTECH</span>
+                        <div class="result">Трафик: <strong>+142%</strong> за 4 месяца</div>
+                    </div>
+                </div>
+
+                <div class="testimonial reveal">
+                    <div class="testimonial-mark">"</div>
+                    <div class="testimonial-quote">
+                        Отдельное уважение за бесплатный тест. Мы скептически относились к SEO - прошлый подрядчик сжёг бюджет и ничего не дал. Здесь за неделю показали позиции, которых мы сами не знали, что можно достичь.
+                    </div>
+                    <div class="testimonial-meta">
+                        <span class="name">Марина К.</span>
+                        <span class="role">Основатель, интернет-магазин детских товаров</span>
+                        <span class="company">E-COMMERCE</span>
+                        <div class="result">Запросов в топ-10: <strong>847</strong></div>
+                    </div>
+                </div>
+
+                <div class="testimonial reveal">
+                    <div class="testimonial-mark">"</div>
+                    <div class="testimonial-quote">
+                        Работаем с Vzlet второй год. Всё прозрачно: еженедельный отчёт, ежемесячный план. Никогда не приходилось выбивать информацию или напоминать о себе. Результат стабильный и предсказуемый.
+                    </div>
+                    <div class="testimonial-meta">
+                        <span class="name">Дмитрий С.</span>
+                        <span class="role">Директор по маркетингу, производитель оборудования</span>
+                        <span class="company">PRODUCTION</span>
+                        <div class="result">Заявки B2B: <strong>×1,8</strong> за год</div>
+                    </div>
+                </div>
+                <br>
+                <a href="#" class="nav-cta">Больше отзывов →</a>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="container">
+                <div class="reveal">
+                <span class="eyebrow">Часто задаваемые вопросы</span>
+                <h2 style="max-width: 700px;">Отвечаем честно.<br>Даже когда это неудобно.</h2>
+                </div>
+
+                <div class="faq">
+                    <div class="faq-item reveal">
+                        <button class="faq-question">
+                            Каким сайтам и компаниям точно нужно SEO?
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                SEO необходимо бизнесам, чьи клиенты активно ищут товары или услуги в Яндексе и Google по конкретным запросам. Если люди набирают в поиске «купить [ваш товар]», «заказать [вашу услугу]» или «[услуга] + город», органический трафик станет стабильным и выгодным источником заявок.
+                                <ul>
+                                <li>SEO - это инвестиция, а не быстрые лиды.</li>
+                                <li>Без достаточного бюджета и готовности ждать 4–12 месяцев лучше выбрать контекст.</li>
+                                <li>Если у вас нет сайта или он технически слабый - сначала разработка, потом продвижение.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <button class="faq-question">
+                        Как проходит бесплатный тест?
+                        <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Мы проводим бесплатный тест, чтобы показать реальный потенциал вашего сайта в SEO-продвижении в Яндексе - без рисков и обязательств с вашей стороны.
+                                <ul>
+                                <li>Собираем 300–500 коммерческих запросов по частотности.</li>
+                                <li>Проверяем, на каких позициях сайт в Яндексе.</li>
+                                <li>Если 30–50 запросов уже в топ-100 - запускаем тест.</li>
+                                <li>Через 2–3 недели делаем прогноз на 3 месяца.</li>
+                                <li>Завершаем тест видеозвонком - обсуждаем план, гарантии и условия работы.</li>
+                                </ul>
+                                Почему бесплатно? Потому что это выгодно и нам: 70% клиентов продолжают работу после теста.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <button class="faq-question">
+                            Сколько стоят услуги?
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Средняя стоимость начинается от 70 000 ₽ в месяц, первый договор всегда на 4 месяца. В эту сумму входит полный цикл работ: до тридцати задач по внутренней оптимизации, внешнее продвижение через безопасные ссылки и естественные поведенческие факторы, плюс ежемесячная гарантия вывода определённого количества запросов в топ-10 Яндекса.
+                                <ul>
+                                <li>Если сайт технически готов и запросы висят на 2–10 позициях - старт от 40 000 ₽/мес.</li>
+                                <li>Итоговая цена зависит от позиций, количества регионов и объёма семантики.</li>
+                                <li>Точные цифры показываем на этапе бесплатного теста.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                            <button class="faq-question">
+                            Как продвигаться на всю страну?
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Для выхода на федеральный уровень мы используем проверенную стратегию регионального SEO: начинаем с самого сильного города (обычно Москва или Санкт-Петербург) плюс один-два дополнительных региона. Сначала глубоко прорабатываем семантику и выводим сайт в топ именно там - это занимает 3–4 месяца.
+                                <ul>
+                                <li>Как только домен набирает вес, позиции начинают расти в остальных городах автоматически.</li>
+                                <li>Дальнейшее подключение новых регионов проходит быстрее и дешевле.</li>
+                                <li>Через 3–4 месяца спокойно добавляются 10–20 регионов.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <button class="faq-question">
+                            Могут ли сайт заблокировать за SEO?
+                            <span class="faq-icon"></span>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Нет, мы используем только безопасные и полностью белые методы. Поведенческие факторы улучшаем плавно и естественно - всё выглядит так, будто сайт сам по себе стал интереснее пользователям.
+                                <ul>
+                                <li>Техническую часть доводим до идеала: ускоряем загрузку, адаптируем под мобильные, выстраиваем структуру.</li>
+                                <li>Контент пишем качественный и релевантный.</li>
+                                <li>Внешние ссылки размещаем только на проверенных площадках без спама и серых сеток.</li>
+                                <li>Никаких ботов, резких накруток и чёрных схем.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="reveal">
+                    <span class="eyebrow">Полезные материалы</span>
+                    <h2 style="max-width: 700px;">Разбираемся в SEO вместе.</h2>
+                </div>
+
+                <div class="articles">
+                    <a href="#" class="article reveal">
+                        <span class="article-tag">Методология</span>
+                        <h4>Как мы считаем прогноз позиций на 3 месяца вперёд</h4>
+                        <span class="read">Просмотр →</span>
+                    </a>
+                    <a href="#" class="article reveal">
+                        <span class="article-tag">Кейс</span>
+                        <h4>E-commerce: как вывести 847 запросов в топ-10 за 4 месяца</h4>
+                        <span class="read">Просмотр →</span>
+                    </a>
+                    <a href="#" class="article reveal">
+                        <span class="article-tag">Разбор</span>
+                        <h4>YMYL-тематика: как продвигать клиники без риска для домена</h4>
+                        <span class="read">Просмотр →</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="final-cta">
+            <div class="final-cta-glow" data-parallax="0.3"></div>
+            <div class="container">
+                <h2 class="reveal">
+                Начнём с того,<br>что <span class="serif accent">ничего не будет стоить</span>.
+                </h2>
+                <p class="reveal">7 дней и вы увидите результат</p>
+                <form class="final-form reveal" onsubmit="event.preventDefault(); this.querySelector('button').innerHTML = '<span>✓ Отправлено</span>';">
+                    <input type="email" placeholder="Ваш email или телефон" required>
+                    <button type="submit" class="btn-primary">
+                        <span>Запустить тест</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m-4-4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                </form>
+                <p class="final-alt reveal">или <a href="#">записаться на 20-минутный разбор</a> с командой</p>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col footer-brand">
+                        <a href="#" class="logo">
+                        <span class="logo-mark"></span>
+                        VZLET<span class="dim">/</span>AGENCY
+                        </a>
+                        <p>SEO-партнёр для бизнеса, который считает деньги. Работаем на результат с финансовыми гарантиями в договоре.</p>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Услуги</h5>
+                        <ul>
+                            <li><a href="#">GEO продвижение в нейросетях Yandex</a></li>
+                            <li><a href="#">SEO продвижение корпоративных сайтов</a></li>
+                            <li><a href="#">SEO продвижение молодого сайта</a></li>
+                            <li><a href="#">SEO продвижение сайтов в ТОП Google</a></li>
+                            <li><a href="#">SEO продвижение сайтов в Яндекс</a></li>
+                            <li><a href="#">SEO-продвижение интернет-магазинов</a></li>
+                            <li><a href="#">SEO продвижение медицинских центров</a></li>
+                            <li><a href="#">SEO продвижение производств</a></li>
+                            <li><a href="#">Аудит SEO сайта</a></li>
+                            <li><a href="#">Поддержка и продвижение сайта Битрикс</a></li>
+                            <li><a href="#">Продвижение сайтов стоматологии</a></li>
+                            <li><a href="#">Трафиковое продвижение сайта</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Компания</h5>
+                        <ul>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Кейсы</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Карта сайта</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Контакты</h5>
+                        <ul>
+                            <li><a href="mailto:hello@vzlet.agency">hello@vzlet.agency</a></li>
+                            <li><a href="tel:+70000000000">+7 (000) 000-00-00</a></li>
+                            <li><a href="#">Telegram</a></li>
+                            <li><a href="#">Москва, Россия</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <span>© 2026 Vzlet Agency. Все права защищены.</span>
+                    <span class="mono">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ · СОГЛАСИЕ НА ОБРАБОТКУ ДАННЫХ</span>
+                </div>
+            </div>
+        </footer>
+
+        <div class="promo-modal" id="promoModal" aria-hidden="true" role="dialog" aria-labelledby="promoTitle" aria-modal="true">
+
+        <div class="promo-modal-overlay" data-close></div>
+
+            <div class="promo-modal-card" role="document">
+                <div class="promo-modal-rays"></div>
+                <div class="promo-modal-conic"></div>
+                <div class="promo-modal-grid"></div>
+
+                <div class="promo-modal-particles">
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+                </div>
+
+                <button class="promo-modal-close" data-close type="button" aria-label="Закрыть">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M3 3L13 13M13 3L3 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                </button>
+
+                <div class="promo-modal-content">
+
+                <div class="promo-modal-badge">
+                    <span class="promo-modal-badge-dot"></span>
+                    <span>Ограниченное предложение</span>
+                </div>
+
+                <h3 class="promo-modal-title" id="promoTitle">
+                    <span class="promo-line">АКЦИЯ ДЛЯ</span>
+                    <span class="promo-line">НОВЫХ <em>КЛИЕНТОВ</em></span>
+                </h3>
+
+                <p class="promo-modal-text">
+                    Прописываем в договоре <strong>гарантии</strong> на получение новых лид-заявок и поисковую выдачу <strong>ТОП-10</strong> для вашего сайта!
+                </p>
+
+                <div class="promo-modal-timer" id="promoTimer">
+                        <div class="promo-timer-cell">
+                            <div class="promo-timer-value" data-unit="days">00</div>
+                            <div class="promo-timer-label">дней</div>
+                        </div>
+                        <div class="promo-timer-sep">:</div>
+                            <div class="promo-timer-cell">
+                            <div class="promo-timer-value" data-unit="hours">00</div>
+                            <div class="promo-timer-label">часов</div>
+                        </div>
+                        <div class="promo-timer-sep">:</div>
+                            <div class="promo-timer-cell">
+                            <div class="promo-timer-value" data-unit="minutes">00</div>
+                            <div class="promo-timer-label">минут</div>
+                        </div>
+                        <div class="promo-timer-sep">:</div>
+                            <div class="promo-timer-cell">
+                            <div class="promo-timer-value" data-unit="seconds">00</div>
+                            <div class="promo-timer-label">секунд</div>
+                        </div>
+                </div>
+
+                <a href="#contact" class="promo-modal-cta" data-modal-open="contactModal" data-close>
+                    <span>Получить консультацию</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M3 8h10m-4-4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+
+                <p class="promo-modal-note">
+                    Оставьте заявку - вернёмся с планом и сроками в течение 24 часов
+                </p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cmodal" id="contactModal" aria-hidden="true" role="dialog">
+            <div class="cmodal__overlay" data-close></div>
+
+            <div class="cmodal__card">
+                <button class="cmodal__close" data-close type="button" aria-label="Закрыть">×</button>
+
+                <h3 class="cmodal__title">Запустим <em>бесплатный</em> тест</h3>
+                <p class="cmodal__sub">Оставьте контакты - вернёмся с планом и прогнозом в течение 24 часов.</p>
+
+                <form class="cmodal__form" id="contactForm" novalidate>
+
+                    <label class="cmodal__field">
+                        <span class="cmodal__label">Имя</span>
+                        <input type="text" name="name" placeholder="Артём" required>
+                    </label>
+
+                    <label class="cmodal__field">
+                        <span class="cmodal__label">Телефон</span>
+                        <input type="tel" name="phone" placeholder="+7 (000) 000-00-00" required>
+                    </label>
+
+                    <label class="cmodal__field">
+                        <span class="cmodal__label">Почта</span>
+                        <input type="email" name="email" placeholder="hello@company.ru" required>
+                    </label>
+
+                    <label class="cmodal__field">
+                        <span class="cmodal__label">Сайт</span>
+                        <input type="text" name="site" placeholder="example.ru" required>
+                    </label>
+
+                    <button type="submit" class="cmodal__submit">Получить консультацию</button>
+
+                </form>
+            </div>
+        </div>
+
+        <button class="to-top" id="toTop" type="button" aria-label="Наверх">
+            <svg class="to-top__progress" viewBox="0 0 48 48" aria-hidden="true">
+                <circle class="to-top__progress-bg" cx="24" cy="24" r="22" />
+                <circle class="to-top__progress-fill" cx="24" cy="24" r="22" id="toTopProgress" />
+            </svg>
+            <span class="to-top__icon">
+                <svg viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M10 16V4M5 9l5-5 5 5"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"/>
+                </svg>
+            </span>
+        </button>
+
+
+        <div class="cookie" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Уведомление об использовании cookies">
+
+            <div class="cookie__glow"></div>
+
+            <div class="cookie__inner">
+
+                <div class="cookie__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10c0-.34-.02-.68-.05-1-.83.03-1.97-.34-2.45-1.02-.9.55-1.92.83-3 .83-2.76 0-5-2.24-5-5 0-.72.15-1.4.43-2.02-.4-.47-.68-1.09-.68-1.78 0-.34.07-.66.19-.96C9.8 4.51 9.24 4 8.5 4c-.28 0-.55.04-.8.11-.5.13-1.04.03-1.42-.35C5.4 2.9 4.45 2.6 3.5 2.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="9" cy="10" r="1" fill="currentColor"/>
+                    <circle cx="14" cy="8" r="1" fill="currentColor"/>
+                    <circle cx="15" cy="14" r="1" fill="currentColor"/>
+                    <circle cx="9" cy="16" r="1" fill="currentColor"/>
+                </svg>
+                </div>
+
+                <div class="cookie__content">
+                <h4 class="cookie__title">Мы используем cookies</h4>
+                <p class="cookie__text">
+                    Это помогает нам анализировать трафик и улучшать сайт. Вы можете принять все cookies или только необходимые.
+                    <a href="#" class="cookie__link">Политика конфиденциальности</a>
+                </p>
+
+                <div class="cookie__actions">
+                    <button type="button" class="cookie__btn cookie__btn--primary" data-cookie-action="accept">
+                    <span>Принять все</span>
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M3 8h10m-4-4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </button>
+                    <button type="button" class="cookie__btn cookie__btn--ghost" data-cookie-action="essential">
+                        Только необходимые
+                    </button>
+                </div>
+                </div>
+
+                <button type="button" class="cookie__close" data-cookie-action="dismiss" aria-label="Закрыть">
+                <svg viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                    <path d="M2 2L12 12M12 2L2 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                </button>
+
+            </div>
+        </div>
+
+        <script src="scripts/sripts.js"></script>
+    </body>
+</html>
