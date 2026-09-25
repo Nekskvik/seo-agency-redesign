@@ -1218,3 +1218,73 @@ document.addEventListener('alpine:init', () => {
     }
   }));
 });
+
+
+/* ============================================================
+  AI ROBOT
+============================================================ */
+(function initAirobot() {
+  const chat     = document.getElementById('airobotChat');
+  const messages = document.getElementById('airobotMessages');
+  const actions  = document.getElementById('airobotActions');
+
+  if (!chat || !messages || !actions) return;
+
+  const RESPONSES = {
+    services: 'Мы закрываем 12 направлений: GEO в нейросетях Яндекса, SEO для корпоративных сайтов, интернет-магазинов, медицинских центров, производств, стоматологий. Плюс аудит, поддержка Битрикса и трафиковое продвижение. Что из этого ближе всего к вам?',
+    price: 'Средняя стоимость — от 70 000 ₽/мес, первый договор на 4 месяца. Если сайт уже технически готов и запросы висят на 2–10 позициях — стартуем от 40 000 ₽/мес. Точные цифры показываем на бесплатном тесте.',
+    test: '7 дней работаем бесплатно: собираем 300–500 запросов, проверяем текущие позиции, показываем прогноз на 3 месяца. Если результата нет — вы ничего не платите.',
+    contact: 'Могу открыть форму прямо сейчас — оставьте сайт и контакт, вернёмся с планом в течение 24 часов.',
+    default: 'Интересный вопрос! Давайте я лучше расскажу, что мы умеем: SEO для бизнеса, который считает деньги. Финансовые гарантии в договоре, бесплатный тест на 7 дней.',
+    block: 'Нет, мы используем только безопасные и полностью белые методы. Поведенческие факторы улучшаем плавно и естественно - всё выглядит так, будто сайт сам по себе стал интереснее пользователям. Техническую часть доводим до идеала: ускоряем загрузку, адаптируем под мобильные, выстраиваем структуру. Контент пишем качественный и релевантный. Внешние ссылки размещаем только на проверенных площадках без спама и серых сеток. Никаких ботов, резких накруток и чёрных схем.',
+    region: 'Для выхода на федеральный уровень мы используем проверенную стратегию регионального SEO: начинаем с самого сильного города (обычно Москва или Санкт-Петербург) плюс один-два дополнительных региона. Сначала глубоко прорабатываем семантику и выводим сайт в топ именно там - это занимает 3–4 месяца.',
+    whoorder: 'SEO необходимо бизнесам, чьи клиенты активно ищут товары или услуги в Яндексе и Google по конкретным запросам. Если люди набирают в поиске «купить [ваш товар]», «заказать [вашу услугу]» или «[услуга] + город», органический трафик станет стабильным и выгодным источником заявок. SEO - это инвестиция, а не быстрые лиды. Без достаточного бюджета и готовности ждать 4–12 месяцев лучше выбрать контекст. Если у вас нет сайта или он технически слабый - сначала разработка, потом продвижение.'
+  };
+
+  const GREETING = 'Привет! Я AI-помощник Vzlet. Помогу разобраться в услугах, ценах и бесплатном тесте. С чего начнём?';
+
+  function addUser(text) {
+    const el = document.createElement('div');
+    el.className = 'airobot__msg airobot__msg--user';
+    el.textContent = text;
+    messages.appendChild(el);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  function addAI(text) {
+    const el = document.createElement('div');
+    el.className = 'airobot__msg airobot__msg--ai';
+    el.textContent = text;
+    messages.appendChild(el);
+    messages.scrollTop = messages.scrollHeight;
+  }
+
+  function showTyping() {
+    const el = document.createElement('div');
+    el.className = 'airobot__typing';
+    el.innerHTML = '<span></span><span></span><span></span>';
+    messages.appendChild(el);
+    messages.scrollTop = messages.scrollHeight;
+    return el;
+  }
+
+  // Приветствие — с небольшой задержкой для красоты
+  setTimeout(() => addAI(GREETING), 400);
+
+
+  // Quick actions
+  actions.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-question]');
+    if (!btn) return;
+    const q = btn.dataset.question;
+    const label = btn.textContent.trim();
+
+    addUser(label);
+    const typing = showTyping();
+
+    setTimeout(() => {
+      typing.remove();
+      addAI(RESPONSES[q] || RESPONSES.default);
+    }, 900 + Math.random() * 600);
+  });
+})();
