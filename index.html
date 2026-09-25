@@ -767,6 +767,210 @@
             </div>
         </section>
 
+        <section class="tcalc" x-data="costCalculator()">
+            <div class="container">
+                <div class="tcalc-header">
+                    <div>
+                        <span class="eyebrow">Калькулятор v2</span>
+                        <h2 style="max-width: 800px;">
+                            Настройте пакет в <span class="serif accent">терминале</span>.
+                        </h2>
+                        <p class="tcalc-sub">
+                            Отметьте услуги и параметры — панель справа считает итог и визуализирует в реальном времени.
+                        </p>
+                    </div>
+                    <div class="tcalc-live">
+                        <span class="tcalc-live-dot"></span>
+                        Live расчёт
+                    </div>
+                    </div>
+
+                    <div class="tcalc-grid">
+
+                    <!-- ===== LEFT: TERMINAL ===== -->
+                    <div class="terminal">
+
+                        <div class="terminal-bar">
+                            <span class="terminal-bar-dot"></span>
+                            <span class="terminal-bar-dot"></span>
+                            <span class="terminal-bar-dot"></span>
+                            <span class="terminal-bar-title">vzlet@calculator ~ /выбери свой тариф</span>
+                            <span class="terminal-bar-status">connected</span>
+                        </div>
+
+                        <div class="terminal-body">
+
+                        <div class="terminal-prompt">
+                            <span class="terminal-prompt-sign">$</span>
+                            <span class="terminal-prompt-path">configure --services --scale --region</span>
+                            <span class="terminal-prompt-cursor"></span>
+                        </div>
+
+                        <!-- === SERVICES === -->
+                        <div class="t-section">
+                            <div class="t-section-head">
+                            <span class="t-section-head-num">01</span>
+                            <span class="t-section-head-title">Направления</span>
+                            <span class="t-section-head-count" x-text="'[' + selectedServices.length + '/' + services.length + ']'"></span>
+                            </div>
+
+                            <div class="t-services">
+                            <template x-for="service in services" :key="service.id">
+                                <label class="t-service" :class="{ 'is-active': service.selected }">
+                                <input type="checkbox" x-model="service.selected">
+                                <span class="t-service-check"></span>
+                                <span class="t-service-name" x-text="service.title"></span>
+                                <span class="t-service-price" x-text="formatShort(service.price)"></span>
+                                </label>
+                            </template>
+                            </div>
+                        </div>
+
+                        <!-- === SCALE === -->
+                        <div class="t-section">
+                            <div class="t-section-head">
+                                <span class="t-section-head-num">02</span>
+                                <span class="t-section-head-title">Масштаб сайта</span>
+                            </div>
+                            <div class="t-chips">
+                                <template x-for="scale in scales" :key="scale.id">
+                                    <label class="t-chip" :class="{ 'is-active': scale.id === selectedScale }">
+                                    <input type="radio" name="scale" :value="scale.id" x-model="selectedScale">
+                                    <span x-text="scale.title"></span>
+                                    <span class="t-chip-coef" x-text="'×' + scale.coef"></span>
+                                    </label>
+                                </template>
+                            </div>
+                        </div>
+
+                        <!-- === REGION === -->
+                        <div class="t-section">
+                            <div class="t-section-head">
+                                <span class="t-section-head-num">03</span>
+                                <span class="t-section-head-title">Регион</span>
+                            </div>
+                            <div class="t-chips">
+                                <template x-for="region in regions" :key="region.id">
+                                    <label class="t-chip" :class="{ 'is-active': region.id === selectedRegion }">
+                                    <input type="radio" name="region" :value="region.id" x-model="selectedRegion">
+                                    <span x-text="region.title"></span>
+                                    <span class="t-chip-coef" x-text="'×' + region.coef"></span>
+                                    </label>
+                                </template>
+                            </div>
+                        </div>
+
+                        </div>
+
+                        <div class="terminal-footer">
+                            <div class="terminal-footer-item">
+                                Услуг: <strong x-text="selectedServices.length"></strong>
+                            </div>
+                            <div class="terminal-footer-sep"></div>
+                            <div class="terminal-footer-item">
+                                Множитель: <strong x-text="'×' + (scaleCoef * regionCoef).toFixed(2)"></strong>
+                            </div>
+                            <div class="terminal-footer-sep"></div>
+                            <div class="terminal-footer-item">
+                                <span>≈ <strong x-text="formatShort(total)"></strong> ₽/мес</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- ===== RIGHT: DASHBOARD ===== -->
+                    <aside class="dashboard">
+                        <div class="dashboard-inner">
+
+                        <div class="dash-label">
+                            <span>Рассчёт стоимости</span>
+                            <span class="dash-label-line"></span>
+                            <span x-text="new Date().toLocaleTimeString('ru-RU', {hour:'2-digit', minute:'2-digit', second:'2-digit'})"></span>
+                        </div>
+
+                        <!-- Empty state -->
+                        <div class="dash-empty" x-show="total === 0" x-cloak>
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2v20M2 12h20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            <p>Выберите хотя бы одно направление</p>
+                            <div class="dash-empty-tip">// ждём ввода</div>
+                        </div>
+
+                        <!-- Result -->
+                        <div x-show="total > 0" x-cloak>
+
+                            <div class="dash-price" :class="{ changing: priceAnimating }">
+                                <span class="dash-price-from">от</span>
+                                <span class="dash-price-value" x-text="formatPrice(total)"></span>
+                                <span class="dash-price-currency">₽</span>
+                                <span class="dash-price-period">/мес</span>
+                            </div>
+                            <div class="dash-annual">
+                                За 4 месяца: <strong x-text="formatPrice(total * 4) + ' ₽'"></strong>
+                            </div>
+
+                            <!-- Chart -->
+                            <div class="dash-chart">
+                                <div class="dash-chart-title">
+                                    <span>Структура стоимости</span>
+                                    <span x-text="'Стоимость ' + formatShort(baseSum)"></span>
+                                </div>
+                                <div class="dash-chart-bars">
+                                    <template x-for="(bar, i) in chartBars" :key="i">
+                                        <div class="dash-chart-bar" :style="'height: ' + bar + '%'"></div>
+                                    </template>
+                                </div>
+                            </div>
+
+                            <!-- Multipliers -->
+                            <div class="dash-multipliers">
+                                <div class="dash-mult" :class="{ 'is-active': scaleCoef > 1 }">
+                                    <div class="dash-mult-label">Масштаб</div>
+                                    <div class="dash-mult-value" x-text="'×' + scaleCoef"></div>
+                                </div>
+                                <div class="dash-mult" :class="{ 'is-active': regionCoef > 1 }">
+                                    <div class="dash-mult-label">Регион</div>
+                                    <div class="dash-mult-value" x-text="'×' + regionCoef"></div>
+                                </div>
+                            </div>
+
+                            <!-- Breakdown -->
+                            <div class="dash-breakdown">
+                                <div class="dash-breakdown-title">// рассчёт</div>
+                                <template x-for="item in breakdown" :key="item.label">
+                                    <div class="dash-breakdown-row">
+                                    <span x-text="item.label"></span>
+                                    <span x-text="'+' + formatShort(item.value)"></span>
+                                    </div>
+                                </template>
+                                <div class="dash-breakdown-row">
+                                    <span>ИТОГО</span>
+                                    <span x-text="formatShort(total) + ' ₽'"></span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <button class="dash-cta"
+                                :disabled="total === 0"
+                                @click="openContact()">
+                            <span>Зафиксировать расчёт</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M3 8h10m-4-4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+
+                        <div class="dash-note" x-show="total > 0" x-cloak>
+                            Точная цена фиксируется в договоре после бесплатного теста
+                        </div>
+
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
         <section id="faq">
             <div class="container">
                 <div class="reveal">
@@ -1140,6 +1344,7 @@
             </div>
         </div>
 
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
         <script src="scripts/sripts.js"></script>
     </body>
 </html>
