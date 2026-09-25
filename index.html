@@ -971,100 +971,82 @@
             </div>
         </section>
 
-        <section id="faq">
+        <!-- ============ AI ROBOT + CHAT ============ -->
+        <section class="airobot" id="airobotSection">
             <div class="container">
                 <div class="reveal">
-                <span class="eyebrow">Часто задаваемые вопросы</span>
-                <h2 style="max-width: 700px;">Отвечаем честно.<br>Даже когда это неудобно.</h2>
+                    <span class="eyebrow">Часто задаваемые вопросы</span>
+                    <h2 style="max-width: 700px;">Отвечаем честно.<br>Даже когда это неудобно.</h2>
                 </div>
+                <div class="airobot__grid">
 
-                <div class="faq">
-                    <div class="faq-item reveal">
-                        <button class="faq-question">
-                            Каким сайтам и компаниям точно нужно SEO?
-                            <span class="faq-icon"></span>
-                        </button>
-                        <div class="faq-answer">
-                            <div class="faq-answer-inner">
-                                SEO необходимо бизнесам, чьи клиенты активно ищут товары или услуги в Яндексе и Google по конкретным запросам. Если люди набирают в поиске «купить [ваш товар]», «заказать [вашу услугу]» или «[услуга] + город», органический трафик станет стабильным и выгодным источником заявок.
-                                <ul>
-                                <li>SEO - это инвестиция, а не быстрые лиды.</li>
-                                <li>Без достаточного бюджета и готовности ждать 4–12 месяцев лучше выбрать контекст.</li>
-                                <li>Если у вас нет сайта или он технически слабый - сначала разработка, потом продвижение.</li>
-                                </ul>
-                            </div>
+                    <!-- Robot -->
+                    <div class="airobot__char reveal" aria-hidden="true">
+                        <div class="airobot__char-glow"></div>
+                        <div class="airobot__pulse"></div>
+                        <div class="airobot__pulse"></div>
+
+                        <div class="airobot__char-body">
+                            <svg viewBox="0 0 300 400" fill="none">
+                                <ellipse cx="150" cy="180" rx="120" ry="140" fill="url(#airobotHalo)" opacity="0.4"/>
+
+                                <rect x="75" y="80" width="150" height="140" rx="50" fill="#0d0d10" stroke="url(#airobotGrad)" stroke-width="2"/>
+
+                                <g class="airobot__eyes">
+                                    <ellipse cx="120" cy="150" rx="9" ry="12" fill="#FAFF18"/>
+                                    <ellipse cx="180" cy="150" rx="9" ry="12" fill="#FAFF18"/>
+                                    <circle cx="120" cy="150" r="3" fill="#0d0d10"/>
+                                    <circle cx="180" cy="150" r="3" fill="#0d0d10"/>
+                                </g>
+
+                                <path class="airobot__mouth" d="M120 190 Q150 205 180 190" stroke="#FAFF18" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+                                <line x1="150" y1="80" x2="150" y2="40" stroke="#FAFF18" stroke-width="2" stroke-linecap="round"/>
+                                <circle class="airobot__antenna" cx="150" cy="32" r="6" fill="#FAFF18"/>
+
+                                <rect x="55" y="130" width="14" height="30" rx="6" fill="#FAFF18" opacity="0.5"/>
+                                <rect x="231" y="130" width="14" height="30" rx="6" fill="#FAFF18" opacity="0.5"/>
+
+                                <rect x="95" y="240" width="110" height="120" rx="20" fill="#0d0d10" stroke="url(#airobotGrad)" stroke-width="2"/>
+                                <circle class="airobot__chest" cx="150" cy="290" r="8" fill="#FAFF18" opacity="0.6"/>
+
+                                <defs>
+                                    <linearGradient id="airobotGrad" x1="0" y1="0" x2="1" y2="1">
+                                        <stop offset="0" stop-color="#FAFF18" stop-opacity="0.9"/>
+                                        <stop offset="1" stop-color="#FAFF18" stop-opacity="0.2"/>
+                                    </linearGradient>
+                                    <radialGradient id="airobotHalo">
+                                        <stop offset="0" stop-color="#FAFF18" stop-opacity="0.4"/>
+                                        <stop offset="1" stop-color="#FAFF18" stop-opacity="0"/>
+                                    </radialGradient>
+                                </defs>
+                            </svg>
                         </div>
+
+                        <p class="airobot__caption">
+                            Я AI-помощник и у меня есть ответы на многие ваши вопросы!
+                        </p>
                     </div>
 
-                    <div class="faq-item reveal">
-                        <button class="faq-question">
-                        Как проходит бесплатный тест?
-                        <span class="faq-icon"></span>
-                        </button>
-                        <div class="faq-answer">
-                            <div class="faq-answer-inner">
-                                Мы проводим бесплатный тест, чтобы показать реальный потенциал вашего сайта в SEO-продвижении в Яндексе - без рисков и обязательств с вашей стороны.
-                                <ul>
-                                <li>Собираем 300–500 коммерческих запросов по частотности.</li>
-                                <li>Проверяем, на каких позициях сайт в Яндексе.</li>
-                                <li>Если 30–50 запросов уже в топ-100 - запускаем тест.</li>
-                                <li>Через 2–3 недели делаем прогноз на 3 месяца.</li>
-                                <li>Завершаем тест видеозвонком - обсуждаем план, гарантии и условия работы.</li>
-                                </ul>
-                                Почему бесплатно? Потому что это выгодно и нам: 70% клиентов продолжают работу после теста.
+                    <!-- Chat panel (open by default) -->
+                    <div class="airobot__chat reveal" id="airobotChat">
+                        <div class="airobot__chat-head">
+                            <div class="airobot__chat-title">
+                                <span class="airobot__chat-status"></span>
+                                <span>Vzlet · AI-помощник</span>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="faq-item reveal">
-                        <button class="faq-question">
-                            Сколько стоят услуги?
-                            <span class="faq-icon"></span>
-                        </button>
-                        <div class="faq-answer">
-                            <div class="faq-answer-inner">
-                                Средняя стоимость начинается от 70 000 ₽ в месяц, первый договор всегда на 4 месяца. В эту сумму входит полный цикл работ: до тридцати задач по внутренней оптимизации, внешнее продвижение через безопасные ссылки и естественные поведенческие факторы, плюс ежемесячная гарантия вывода определённого количества запросов в топ-10 Яндекса.
-                                <ul>
-                                <li>Если сайт технически готов и запросы висят на 2–10 позициях - старт от 40 000 ₽/мес.</li>
-                                <li>Итоговая цена зависит от позиций, количества регионов и объёма семантики.</li>
-                                <li>Точные цифры показываем на этапе бесплатного теста.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                        <div class="airobot__chat-messages" id="airobotMessages"></div>
 
-                    <div class="faq-item reveal">
-                            <button class="faq-question">
-                            Как продвигаться на всю страну?
-                            <span class="faq-icon"></span>
-                        </button>
-                        <div class="faq-answer">
-                            <div class="faq-answer-inner">
-                                Для выхода на федеральный уровень мы используем проверенную стратегию регионального SEO: начинаем с самого сильного города (обычно Москва или Санкт-Петербург) плюс один-два дополнительных региона. Сначала глубоко прорабатываем семантику и выводим сайт в топ именно там - это занимает 3–4 месяца.
-                                <ul>
-                                <li>Как только домен набирает вес, позиции начинают расти в остальных городах автоматически.</li>
-                                <li>Дальнейшее подключение новых регионов проходит быстрее и дешевле.</li>
-                                <li>Через 3–4 месяца спокойно добавляются 10–20 регионов.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-item reveal">
-                        <button class="faq-question">
-                            Могут ли сайт заблокировать за SEO?
-                            <span class="faq-icon"></span>
-                        </button>
-                        <div class="faq-answer">
-                            <div class="faq-answer-inner">
-                                Нет, мы используем только безопасные и полностью белые методы. Поведенческие факторы улучшаем плавно и естественно - всё выглядит так, будто сайт сам по себе стал интереснее пользователям.
-                                <ul>
-                                <li>Техническую часть доводим до идеала: ускоряем загрузку, адаптируем под мобильные, выстраиваем структуру.</li>
-                                <li>Контент пишем качественный и релевантный.</li>
-                                <li>Внешние ссылки размещаем только на проверенных площадках без спама и серых сеток.</li>
-                                <li>Никаких ботов, резких накруток и чёрных схем.</li>
-                                </ul>
-                            </div>
+                        <div class="airobot__chat-actions" id="airobotActions">
+                            <button class="airobot__chat-action" data-question="services">Какие у вас есть услуги?</button>
+                            <button class="airobot__chat-action" data-question="price">Сколько стоят ваши услуги?</button>
+                            <button class="airobot__chat-action" data-question="test">Есть бесплатный тест?</button>
+                            <button class="airobot__chat-action" data-question="contact">Как с вами связаться?</button>
+                            <button class="airobot__chat-action" data-question="block">Могут ли сайт заблокировать за SEO?</button>
+                            <button class="airobot__chat-action" data-question="region">Как продвигаться на всю страну?</button>
+                            <button class="airobot__chat-action" data-question="whoorder">Каким сайтам и компаниям точно нужно SEO?</button>
                         </div>
                     </div>
                 </div>
