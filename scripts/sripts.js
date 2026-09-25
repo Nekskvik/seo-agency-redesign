@@ -1101,3 +1101,120 @@ const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').mat
     console.log('[cookies] saved:', value);
   });
 })();
+
+/* ============================================================
+   LIVE CALCULATOR
+   ============================================================ */
+document.addEventListener('alpine:init', () => {
+  Alpine.data('costCalculator', () => ({
+    services: [
+      { id: 'geo',     title: 'GEO в нейросетях Yandex',      price: 45000, selected: false },
+      { id: 'corp',    title: 'Корпоративные сайты',          price: 40000, selected: false },
+      { id: 'young',   title: 'Молодой сайт',                 price: 35000, selected: false },
+      { id: 'google',  title: 'ТОП Google',                    price: 50000, selected: false },
+      { id: 'yandex',  title: 'ТОП Яндекс',                    price: 45000, selected: false },
+      { id: 'ecom',    title: 'Интернет-магазины',             price: 60000, selected: false },
+      { id: 'med',     title: 'Медицинские центры',            price: 55000, selected: false },
+      { id: 'prod',    title: 'Производства',                  price: 50000, selected: false },
+      { id: 'audit',   title: 'Аудит SEO',                     price: 25000, selected: false },
+      { id: 'bitrix',  title: 'Битрикс',                       price: 40000, selected: false },
+      { id: 'dent',    title: 'Стоматология',                  price: 50000, selected: false },
+      { id: 'traffic', title: 'Трафиковое продвижение',        price: 35000, selected: false }
+    ],
+
+    scales: [
+      { id: 'small',  title: 'Малый', coef: 1.0 },
+      { id: 'medium', title: 'Средний', coef: 1.3 },
+      { id: 'large',  title: 'Крупный', coef: 1.6 }
+    ],
+    selectedScale: 'small',
+
+    regions: [
+      { id: 'one',    title: '1 город', coef: 1.0 },
+      { id: 'few',    title: '2–5', coef: 1.2 },
+      { id: 'region', title: 'Округ', coef: 1.5 },
+      { id: 'all',    title: 'Россия', coef: 1.8 }
+    ],
+    selectedRegion: 'one',
+
+    priceAnimating: false,
+
+    get selectedServices() {
+      return this.services.filter(s => s.selected);
+    },
+    get scaleCoef() {
+      const s = this.scales.find(x => x.id === this.selectedScale);
+      return s ? s.coef : 1;
+    },
+    get regionCoef() {
+      const r = this.regions.find(x => x.id === this.selectedRegion);
+      return r ? r.coef : 1;
+    },
+    get baseSum() {
+      return this.selectedServices.reduce((sum, s) => sum + s.price, 0);
+    },
+    get total() {
+      if (this.baseSum === 0) return 0;
+      const m = this.baseSum * this.scaleCoef * this.regionCoef;
+      return Math.round(m / 1000) * 1000;
+    },
+    get breakdown() {
+      if (this.total === 0) return [];
+      const rows = [{ label: 'BASE · услуги', value: this.baseSum }];
+      if (this.scaleCoef > 1) {
+        rows.push({
+          label: 'SCALE · ×' + this.scaleCoef,
+          value: Math.round(this.baseSum * (this.scaleCoef - 1))
+        });
+      }
+      if (this.regionCoef > 1) {
+        rows.push({
+          label: 'REGION · ×' + this.regionCoef,
+          value: Math.round(this.baseSum * this.scaleCoef * (this.regionCoef - 1))
+        });
+      }
+    },
+
+    // Живой график — 7 бар, генерируются псевдослучайно на основе total
+    get chartBars() {
+      if (this.total === 0) return [0,0,0,0,0,0,0];
+      const base = this.baseSum / this.total; // доля базы в итоге
+      const bars = [];
+      for (let i = 0; i < 7; i++) {
+        // Формула даёт "интересный" паттерн без рандома
+        const wave = Math.sin(i * 0.9 + this.total / 100000) * 0.3 + 0.7;
+        const h = Math.max(15, Math.min(100, wave * 100 * (0.6 + base * 0.6)));
+        bars.push(Math.round(h));
+      }
+      return bars;
+    },
+
+    formatPrice(n) {
+      if (!n || n === 0) return '0';
+      return n.toLocaleString('ru-RU');
+    },
+    // Компактный формат для узких мест: 45 000 → "45k"
+    formatShort(n) {
+      if (!n || n === 0) return '0';
+      if (n >= 1000000) return (n / 1000000).toFixed(1).replace('.0','') + 'M';
+      if (n >= 1000) return Math.round(n / 1000) + 'k';
+      return String(n);
+    },
+
+    init() {
+      // Анимация цены при каждом изменении
+      this.$watch('total', () => {
+        this.priceAnimating = true;
+        setTimeout(() => { this.priceAnimating = false; }, 400);
+      });
+    },
+
+    openContact() {
+      alert(
+        'Открывается модалка контактов.\n\n' +
+        'Выбрано услуг: ' + this.selectedServices.length + '\n' +
+        'Итого: ' + this.formatPrice(this.total) + ' ₽/мес'
+      );
+    }
+  }));
+});
